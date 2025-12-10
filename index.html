@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Footble</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- TOP CONTROLS: Reset → Title → Possible Answers -->
+  <header class="top-stack">
+    <button id="resetBtn">Reset Game</button>
+    <h1 id="title">Footble</h1>
+    <button id="wordListBtn">Possible Answers</button>
+  </header>
+
+  <!-- DARK OVERLAY -->
+  <div id="popupOverlay"></div>
+
+  <!-- WORD LIST POPUP -->
+  <div id="wordPopup">
+    <h2>All Possible Answers</h2>
+
+    <label for="lengthFilter" style="font-size:14px;">Filter by length:</label>
+    <select id="lengthFilter" style="margin-bottom:10px; padding:4px;"> 
+      <option value="all">All</option>
+    </select>
+
+    <div id="wordList"></div>
+
+    <button id="closePopup">Close</button>
+  </div>
+
+  <!-- MAIN GAME BOARD -->
+  <main>
+    <div id="gameBoard"></div>
+  </main>
+
+  <!-- ON-SCREEN KEYBOARD -->
+  <div id="keyboard"></div>
+
+  <!-- BOTTOM -->
+  <div id="bottomBar">
+    <h1 id="trueAns"></h1>
+    <button id="playAgainBtn" onclick="startGame()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
